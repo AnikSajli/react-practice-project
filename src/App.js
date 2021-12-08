@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import {TodoList} from "./hooks/Todo-list";
-import Form from "./hooks/Form";
-import Counter from "./hooks/Counter";
+import {TodoList} from "./Hooks/Todo-list";
+import Form from "./Hooks/Form";
+import Counter from "./Hooks/Counter";
+import LifecyclePhase from "./Lifecycle/Lifecycle-phase";
+import TestForm from "./Forms/Form";
 
 class App extends Component {
-    state = {
-        name: "Anik"
-    }
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         name: "Anik"
-    //     }
+    // state = {
+    //     name: "Anik"
     // }
+    constructor() {
+        super();
+        this.state = {
+            name: "Anik"
+        }
+    }
 
     clickHandler = (text) => {
         //console.log("Button clicked!");
@@ -45,6 +47,8 @@ class App extends Component {
           <TodoList />
           <Form/>
           <Counter/>
+          <LifecyclePhase/>
+          <TestForm/>
       </div>
     );
   }
